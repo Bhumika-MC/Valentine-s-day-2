@@ -1,0 +1,17 @@
+# 1️⃣ Dependencies (very large, auto-installed)
+node_modules/
+
+# 2️⃣ Environment secrets (PASSWORDS, API KEYS, DB URLs)
+.env
+.env.*
+
+# 3️⃣ Build output (auto-generated files)
+dist/
+build/
+
+# 4️⃣ Logs
+*.log
+
+# 5️⃣ OS junk files
+.DS_Store
+Thumbs.db
