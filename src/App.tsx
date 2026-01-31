@@ -332,14 +332,25 @@ const Page3_Gallery = ({
   onHome: () => void;
 }) => {
   const photos = [
-    "https://images.unsplash.com/photo-1766041675624-37dba05ca993?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjB3YWxraW5nJTIwYmVhY2glMjBzdW5zZXR8ZW58MXx8fHwxNzY5NjE5MzI5fDA",
-    "https://images.unsplash.com/photo-1612131971594-84cafc18c1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjBzdW5zZXQlMjBzaWxob3VldHRlc3xlbnwxfHx8fDE3Njk2MTkzMjl8MA",
-    "https://images.unsplash.com/photo-1763739906957-418dafe284f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjBwaWNuaWMlMjBwaWNuaWMlMjBwYXJrJTIwZ2FyZGVufGVufDF8fHx8MTc2OTYxOTMyOXww",
-    "https://images.unsplash.com/photo-1763658731382-b291d501991e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjBjaXR5JTIwbGlnaHRzJTIwbmlnaHQlMjBwYXJrfGVufDF8fHx8MTc2OTYxOTMyOXww",
+    "https://images.unsplash.com/photo-1644959207256-6a5b1a4fc477?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1708574376475-f82c326a1487?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvdXBsZXMlMjBwaG90b3N8ZW58MHx8MHx8fDA%3D",
+    "https://plus.unsplash.com/premium_photo-1761929642358-a0d375c77839?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGNvdXBsZXMlMjBwaG90b3N8ZW58MHx8MHx8fDA%3D",
+    "https://media.istockphoto.com/id/1424243404/photo/couple-having-coffee-outdoors.webp?a=1&b=1&s=612x612&w=0&k=20&c=oSUSaF-EinJnLWDUBGgeUL2z14NsIldTlROATMvfi-Q=",
     "https://images.unsplash.com/photo-1731936757627-f2a1ea5893e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjBjb3p5JTIwZmlyZXBsYWNlJTIwd2ludGVyfGVufDF8fHx8MTc2OTYxOTMyOXww",
-    "https://images.unsplash.com/photo-1758686254555-9bcaba0dd46d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjBkYW5jaW5nJTIwaG9tZSUyMGxpdmluZyUyMHJvb218ZW58MXx8fHwxNzY5NjE5MzI5fDA",
-    "https://images.unsplash.com/photo-1632736050121-6cce82f811b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjBnb2xkZW4lMjBob3VyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5NjE5MzMwfDA",
-    "https://images.unsplash.com/photo-1766735327114-11dd5bc4aff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGdhcmRlbiUyMGZsb3dlcnMlMjBjb3VwbGV8ZW58MXx8fHwxNzY5NjE5MzMwfDA",
+    "https://images.unsplash.com/photo-1639078129271-3c0cd1552430?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGNvdXBsZXMlMjBwaG90b3N8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1635559835558-44ef9efb5138?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njl8fGNvdXBsZXMlMjBwaG90b3N8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1576566982688-c88e03b99a0d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNvdXBsZXMlMjBwaG90b3N8ZW58MHx8MHx8fDA%3D",
+  ];
+
+  const loveCaptions = [
+    "Forever With You",
+    "My Safe Place",
+    "You & Me Always",
+    "Happiness Feels Like This",
+    "Stolen Little Moments",
+    "Where Love Lives",
+    "My Favorite Memory",
+    "Endless Us",
   ];
 
   return (
@@ -389,9 +400,10 @@ const Page3_Gallery = ({
                 className="w-full hover:scale-110 transition-transform duration-700"
               />
             </motion.div>
+
             <div className="absolute inset-0 bg-gradient-to-t from-rose-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
               <span className="text-white font-medium flex items-center gap-2">
-                <Heart size={16} fill="white" /> Precious Moment
+                <Heart size={16} fill="white" /> {loveCaptions[i]}
               </span>
             </div>
           </motion.div>
@@ -402,6 +414,7 @@ const Page3_Gallery = ({
     </motion.div>
   );
 };
+
 
 const Page4_Timeline = ({
   onNext,
@@ -539,15 +552,15 @@ const Page5_Quotes = ({
   const quotes = [
     {
       text: "Whatever our souls are made of, his and mine are the same.",
-      author: "Emily Brontë",
+      author: "Raj, for Diya",
     },
     {
       text: "I love you not only for what you are, but for what I am when I am with you.",
-      author: "Elizabeth Barrett Browning",
+      author: "Diya, about Raj",
     },
     {
       text: "In all the world, there is no heart for me like yours.",
-      author: "Maya Angelou",
+      author: "Raj ❤️ Diya",
     },
   ];
 
