@@ -13,6 +13,7 @@ import {
   Home,
 } from "lucide-react";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
+import { ArrowRight } from "lucide-react";
 
 // --- Sub-components ---
 
@@ -151,33 +152,125 @@ const HeartBackground = () => {
   );
 };
 
+// const Page1_Cover = ({ onNext }: { onNext: () => void }) => (
+//   <motion.div
+//     initial={{ opacity: 0 }}
+//     animate={{ opacity: 1 }}
+//     exit={{ opacity: 0 }}
+//     className="min-h-screen flex flex-col items-center justify-center p-6 text-center relative overflow-hidden"
+//   >
+//     <FloatingSparkles count={20} />
+
+//     <motion.div
+//       initial={{ scale: 0.8, opacity: 0 }}
+//       animate={{ scale: 1, opacity: 1 }}
+//       transition={{ duration: 1.5, ease: "easeOut" }}
+//       className="relative mb-8"
+//     >
+//       {/* Soft glowing background animation (kept) */}
+//       <motion.div
+//         className="absolute inset-0 blur-3xl bg-rose-300/30 rounded-full"
+//         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+//         transition={{ duration: 3, repeat: Infinity }}
+//       />
+
+//       {/* Static heart (no animation) */}
+//       <div>
+//         <Heart
+//           className="w-32 h-32 text-rose-500 relative z-10"
+//           fill="currentColor"
+//         />
+//       </div>
+//     </motion.div>
+
+    
+
+//     <motion.h1
+//       initial={{ y: 20, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ delay: 0.5, duration: 1 }}
+//       className="text-5xl md:text-7xl font-serif text-rose-800 mb-4"
+//       style={{ fontFamily: "'Playfair Display', serif" }}
+//     >
+//       <motion.span
+//         animate={{ opacity: [0.8, 1, 0.8] }}
+//         transition={{ duration: 2, repeat: Infinity }}
+//       >
+//         Happy Valentine's day my LOVE
+//       </motion.span>
+//     </motion.h1>
+
+//     <motion.h1
+//       initial={{ y: 20, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ delay: 0.5, duration: 1 }}
+//       className="text-5xl md:text-7xl font-serif text-rose-800 mb-4"
+//       style={{ fontFamily: "'Playfair Display', serif" }}
+//     >
+//       <motion.span
+//         animate={{ opacity: [0.8, 1, 0.8] }}
+//         transition={{ duration: 2, repeat: Infinity }}
+//       >
+//         Our Love Story
+//       </motion.span>
+//     </motion.h1>
+
+//     <motion.p
+//       initial={{ y: 20, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ delay: 0.8, duration: 1 }}
+//       className="text-xl md:text-2xl text-rose-600/80 italic mb-12 max-w-lg"
+//     >
+//       "Every moment with you is a beautiful page in the book of my life."
+//     </motion.p>
+
+//     <motion.button
+//       initial={{ y: 20, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ delay: 1.2 }}
+//       whileHover={{
+//         scale: 1.05,
+//         boxShadow: "0 20px 40px rgba(244, 114, 182, 0.3)",
+//       }}
+//       whileTap={{ scale: 0.95 }}
+//       onClick={onNext}
+//       className="px-10 py-4 bg-rose-500 text-white rounded-full shadow-lg shadow-rose-200 flex items-center gap-2 text-lg font-medium hover:bg-rose-600 transition-colors z-20 mb-24"
+//     >
+//       Begin the Journey <Sparkles size={20} />
+//     </motion.button>
+//   </motion.div>
+// );
+
 const Page1_Cover = ({ onNext }: { onNext: () => void }) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
-    className="min-h-screen flex flex-col items-center justify-center p-6 text-center relative overflow-hidden"
+    style={{ backgroundColor: '#1a0a12' }}
+    className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-center relative overflow-hidden"
   >
     <FloatingSparkles count={20} />
+    <FloatingHearts count={15} />
 
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1.5, ease: "easeOut" }}
-      className="relative mb-8"
+      className="relative mb-8 sm:mb-12 md:mb-16"
     >
-      {/* Soft glowing background animation (kept) */}
+      {/* Soft glowing background animation */}
       <motion.div
-        className="absolute inset-0 blur-3xl bg-rose-300/30 rounded-full"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+        className="absolute inset-0 blur-3xl bg-rose-500/40 rounded-full"
+        animate={{ scale: [1, 1.4, 1], opacity: [0.4, 0.6, 0.4] }}
         transition={{ duration: 3, repeat: Infinity }}
       />
 
-      {/* Static heart (no animation) */}
+      {/* Static heart - larger and more visible */}
       <div>
         <Heart
-          className="w-32 h-32 text-rose-500 relative z-10"
+          className="w-32 h-32 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 text-rose-300 relative z-10 drop-shadow-2xl"
           fill="currentColor"
+          strokeWidth={0.5}
         />
       </div>
     </motion.div>
@@ -186,27 +279,56 @@ const Page1_Cover = ({ onNext }: { onNext: () => void }) => (
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 1 }}
-      className="text-5xl md:text-7xl font-serif text-rose-800 mb-4"
-      style={{ fontFamily: "'Playfair Display', serif" }}
+      className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-serif mb-6 sm:mb-8 md:mb-10 px-2 font-bold tracking-tight leading-none"
+      style={{ 
+        fontFamily: "'Playfair Display', serif",
+        color: '#fce7f3',
+        textShadow: '0 0 40px rgba(251, 207, 232, 0.8), 0 0 80px rgba(251, 207, 232, 0.5), 0 4px 20px rgba(0, 0, 0, 0.8)'
+      }}
     >
       <motion.span
-        animate={{ opacity: [0.8, 1, 0.8] }}
+        animate={{ opacity: [0.9, 1, 0.9] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        Happy Valentine's day my LOVE
+        Happy Valentine's Day
       </motion.span>
     </motion.h1>
+
+    <motion.h2
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.6, duration: 1 }}
+      className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif mb-6 sm:mb-8 md:mb-10 px-2 font-bold tracking-wide"
+      style={{ 
+        fontFamily: "'Playfair Display', serif",
+        color: '#fbcfe8',
+        textShadow: '0 0 30px rgba(251, 207, 232, 0.8), 0 0 60px rgba(251, 207, 232, 0.5), 0 4px 15px rgba(0, 0, 0, 0.7)'
+      }}
+    >
+      <motion.span
+        animate={{ opacity: [0.9, 1, 0.9] }}
+        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+      >
+        My LOVE ❤️
+      </motion.span>
+    </motion.h2>
 
     <motion.h1
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.5, duration: 1 }}
-      className="text-5xl md:text-7xl font-serif text-rose-800 mb-4"
-      style={{ fontFamily: "'Playfair Display', serif" }}
+      transition={{ delay: 0.7, duration: 1 }}
+      className="text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] font-serif mb-8 sm:mb-12 md:mb-16 px-2 font-bold tracking-tight leading-none"
+      style={{ 
+        fontFamily: "'Playfair Display', serif",
+        color: '#fdf2f8',
+        textShadow: '0 0 50px rgba(253, 242, 248, 0.9), 0 0 100px rgba(251, 207, 232, 0.6), 0 6px 30px rgba(0, 0, 0, 0.9)'
+      }}
     >
       <motion.span
-        animate={{ opacity: [0.8, 1, 0.8] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        animate={{ 
+          opacity: [0.9, 1, 0.9],
+        }}
+        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
       >
         Our Love Story
       </motion.span>
@@ -215,8 +337,12 @@ const Page1_Cover = ({ onNext }: { onNext: () => void }) => (
     <motion.p
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.8, duration: 1 }}
-      className="text-xl md:text-2xl text-rose-600/80 italic mb-12 max-w-lg"
+      transition={{ delay: 0.9, duration: 1 }}
+      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl italic mb-12 sm:mb-16 md:mb-20 max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl px-4 font-semibold leading-relaxed"
+      style={{ 
+        color: '#fce7f3',
+        textShadow: '0 0 25px rgba(252, 231, 243, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)'
+      }}
     >
       "Every moment with you is a beautiful page in the book of my life."
     </motion.p>
@@ -226,17 +352,80 @@ const Page1_Cover = ({ onNext }: { onNext: () => void }) => (
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1.2 }}
       whileHover={{
-        scale: 1.05,
-        boxShadow: "0 20px 40px rgba(244, 114, 182, 0.3)",
+        scale: 1.1,
+        boxShadow: "0 30px 60px rgba(244, 114, 182, 0.6)",
       }}
       whileTap={{ scale: 0.95 }}
       onClick={onNext}
-      className="px-10 py-4 bg-rose-500 text-white rounded-full shadow-lg shadow-rose-200 flex items-center gap-2 text-lg font-medium hover:bg-rose-600 transition-colors z-20 mb-24"
+      className="px-10 sm:px-14 md:px-20 lg:px-24 py-5 sm:py-6 md:py-8 bg-rose-500 text-white rounded-full shadow-2xl shadow-rose-500/50 flex items-center gap-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold hover:bg-rose-400 transition-all z-20 mb-16 sm:mb-20 md:mb-24"
+      style={{
+        border: '3px solid rgba(251, 207, 232, 0.6)',
+        boxShadow: '0 0 40px rgba(244, 114, 182, 0.5), 0 20px 50px rgba(244, 114, 182, 0.4)'
+      }}
     >
-      Begin the Journey <Sparkles size={20} />
+      BEGIN THE JOURNEY<ArrowRight size={36} />
     </motion.button>
   </motion.div>
 );
+
+// FloatingHearts component with responsive sizing
+const FloatingHearts = ({ count }: { count: number }) => {
+  const [windowSize, setWindowSize] = React.useState({
+    width: typeof window !== 'undefined' ? window.innerWidth : 1000,
+    height: typeof window !== 'undefined' ? window.innerHeight : 1000,
+  });
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <>
+      {Array.from({ length: count }).map((_, i) => {
+        const heartSize = windowSize.width < 640 
+          ? Math.random() * 18 + 15  // Bigger on mobile
+          : Math.random() * 30 + 20; // Much bigger on desktop
+
+        return (
+          <motion.div
+            key={i}
+            className="absolute pointer-events-none"
+            initial={{
+              x: Math.random() * windowSize.width,
+              y: windowSize.height + 50,
+              opacity: 0,
+            }}
+            animate={{
+              y: -100,
+              opacity: [0, 0.8, 0.8, 0],
+              x: Math.random() * windowSize.width,
+            }}
+            transition={{
+              duration: Math.random() * 5 + 8,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+              ease: "linear",
+            }}
+          >
+            <Heart
+              className="text-rose-300/60"
+              fill="currentColor"
+              size={heartSize}
+            />
+          </motion.div>
+        );
+      })}
+    </>
+  );
+};
 
 const Page2_Beginning = ({
   onNext,
