@@ -706,6 +706,248 @@ const FloatingHearts = ({ count }: { count: number }) => {
 //   </motion.div>
 // );
 
+// const Page2_Beginning = ({
+//   onNext,
+//   onPrev,
+//   onHome,
+// }: {
+//   onNext: () => void;
+//   onPrev: () => void;
+//   onHome: () => void;
+// }) => (
+//   <motion.div
+//     initial={{ opacity: 0, x: 100 }}
+//     animate={{ opacity: 1, x: 0 }}
+//     exit={{ opacity: 0, x: -100 }}
+//     transition={{ duration: 0.6 }}
+//     style={{ backgroundColor: "#1a0a12" }}
+//     className="min-h-screen flex flex-col lg:flex-row items-center justify-center p-4 sm:p-6 md:p-8 gap-8 sm:gap-10 md:gap-12 pb-32"
+//   >
+//     <FloatingSparkles count={10} />
+//     <FloatingHearts count={12} />
+
+//     <motion.div
+//       className="w-full lg:w-1/2 relative"
+//       initial={{ x: -50, opacity: 0 }}
+//       animate={{ x: 0, opacity: 1 }}
+//       transition={{ delay: 0.3, duration: 0.8 }}
+//     >
+//       <motion.div
+//         className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10"
+//         style={{
+//           border: "4px solid rgba(251, 207, 232, 0.3)",
+//           boxShadow:
+//             "0 0 50px rgba(244, 114, 182, 0.4), 0 25px 70px rgba(0, 0, 0, 0.9)",
+//         }}
+//         whileHover={{
+//           scale: 1.02,
+//           boxShadow:
+//             "0 0 60px rgba(244, 114, 182, 0.5), 0 30px 80px rgba(0, 0, 0, 0.9)",
+//         }}
+//         transition={{ duration: 0.4 }}
+//       >
+//         <motion.div
+//           initial={{ scale: 1.1 }}
+//           animate={{ scale: 1 }}
+//           transition={{ duration: 1.5, ease: "easeOut" }}
+//         >
+//           <ImageWithFallback
+//             src="https://images.unsplash.com/photo-1769050737841-da20a4a13e19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZSUyMGxhdWdoaW5nfGVufDF8fHx8MTc2OTYwNzIzNnww"
+//             alt="The Beginning"
+//             className="w-full h-full object-cover"
+//           />
+//         </motion.div>
+//       </motion.div>
+//       <motion.div
+//         className="absolute -top-6 -left-6 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center -rotate-12 shadow-lg z-20"
+//         style={{
+//           backgroundColor: "rgba(251, 113, 133, 0.15)",
+//           border: "3px solid rgba(251, 207, 232, 0.5)",
+//           boxShadow:
+//             "0 0 40px rgba(244, 114, 182, 0.5), 0 10px 30px rgba(0, 0, 0, 0.8)",
+//         }}
+//         animate={{ rotate: [-12, -8, -12], y: [0, -5, 0] }}
+//         transition={{ duration: 3, repeat: Infinity }}
+//       >
+//         <Calendar size={44} className="text-rose-300 drop-shadow-lg" />
+//       </motion.div>
+//     </motion.div>
+
+//     <div className="w-full lg:w-1/2 flex flex-col items-start text-left px-2 sm:px-4">
+//       <motion.span
+//         initial={{ opacity: 0, y: 20 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ delay: 0.5 }}
+//         className="font-bold tracking-widest uppercase mb-4 sm:mb-6 text-xl sm:text-2xl md:text-3xl"
+//         style={{
+//           color: "#fbcfe8",
+//           textShadow:
+//             "0 0 25px rgba(251, 207, 232, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
+//         }}
+//       >
+//         Chapter One
+//       </motion.span>
+//       <motion.h2
+//         initial={{ opacity: 0, y: 20 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ delay: 0.6 }}
+//         className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif mb-6 sm:mb-8 md:mb-10 font-bold leading-tight"
+//         style={{
+//           fontFamily: "'Playfair Display', serif",
+//           color: "#fdf2f8",
+//           textShadow:
+//             "0 0 50px rgba(253, 242, 248, 0.9), 0 0 100px rgba(251, 207, 232, 0.6), 0 6px 30px rgba(0, 0, 0, 0.9)",
+//         }}
+//       >
+//         How It All Started
+//       </motion.h2>
+//       <motion.p
+//         initial={{ opacity: 0, y: 20 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ delay: 0.7 }}
+//         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-8 font-medium"
+//         style={{
+//           color: "#fce7f3",
+//           textShadow:
+//             "0 0 25px rgba(252, 231, 243, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
+//         }}
+//       >
+//         Do you remember the day we first met? The world seemed to pause for just
+//         a second. I never knew that a single conversation would lead to a
+//         lifetime of laughter and love. From that first smile, I knew there was
+//         something magical about us.
+//       </motion.p>
+//     </div>
+
+//     <NavigationBar onNext={onNext} onPrev={onPrev} onHome={onHome} />
+//   </motion.div>
+// );
+
+// const Page2_Beginning = ({
+//   onNext,
+//   onPrev,
+//   onHome,
+// }: {
+//   onNext: () => void;
+//   onPrev: () => void;
+//   onHome: () => void;
+// }) => (
+//   <motion.div
+//     initial={{ opacity: 0, x: 100 }}
+//     animate={{ opacity: 1, x: 0 }}
+//     exit={{ opacity: 0, x: -100 }}
+//     transition={{ duration: 0.6 }}
+//     style={{ backgroundColor: "#1a0a12" }}
+//     className="min-h-screen w-full flex flex-col items-center justify-start lg:justify-center p-3 sm:p-6 md:p-8 pt-6 pb-28 sm:pb-32 overflow-x-hidden"
+//   >
+//     <FloatingSparkles count={10} />
+//     <FloatingHearts count={12} />
+
+//     <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
+//       {/* Image Container */}
+//       <motion.div
+//         className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-none lg:w-1/2 relative flex-shrink-0"
+//         initial={{ x: -50, opacity: 0 }}
+//         animate={{ x: 0, opacity: 1 }}
+//         transition={{ delay: 0.3, duration: 0.8 }}
+//       >
+//         <motion.div
+//           className="aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative z-10 mx-auto"
+//           style={{
+//             border: "3px solid rgba(251, 207, 232, 0.3)",
+//             boxShadow:
+//               "0 0 30px rgba(244, 114, 182, 0.4), 0 15px 50px rgba(0, 0, 0, 0.9)",
+//           }}
+//           whileHover={{
+//             scale: 1.02,
+//             boxShadow:
+//               "0 0 60px rgba(244, 114, 182, 0.5), 0 30px 80px rgba(0, 0, 0, 0.9)",
+//           }}
+//           transition={{ duration: 0.4 }}
+//         >
+//           <motion.div
+//             initial={{ scale: 1.1 }}
+//             animate={{ scale: 1 }}
+//             transition={{ duration: 1.5, ease: "easeOut" }}
+//           >
+//             <ImageWithFallback
+//               src="https://images.unsplash.com/photo-1769050737841-da20a4a13e19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZSUyMGxhdWdoaW5nfGVufDF8fHx8MTc2OTYwNzIzNnww"
+//               alt="The Beginning"
+//               className="w-full h-full object-cover"
+//             />
+//           </motion.div>
+//         </motion.div>
+        
+//         {/* Calendar Badge - Responsive Sizing */}
+//         <motion.div
+//           className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 md:-top-6 md:-left-6 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full flex items-center justify-center -rotate-12 shadow-lg z-20"
+//           style={{
+//             backgroundColor: "rgba(251, 113, 133, 0.15)",
+//             border: "2px solid rgba(251, 207, 232, 0.5)",
+//             boxShadow:
+//               "0 0 30px rgba(244, 114, 182, 0.5), 0 10px 30px rgba(0, 0, 0, 0.8)",
+//           }}
+//           animate={{ rotate: [-12, -8, -12], y: [0, -5, 0] }}
+//           transition={{ duration: 3, repeat: Infinity }}
+//         >
+//           <Calendar className="text-rose-300 drop-shadow-lg w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 lg:w-12 lg:h-12" />
+//         </motion.div>
+//       </motion.div>
+
+//       {/* Text Content */}
+//       <div className="w-full lg:w-1/2 flex flex-col items-start text-left px-2 sm:px-4">
+//         <motion.span
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ delay: 0.5 }}
+//           className="font-bold tracking-wider sm:tracking-widest uppercase mb-2 sm:mb-4 md:mb-6 text-sm sm:text-lg md:text-xl lg:text-2xl"
+//           style={{
+//             color: "#fbcfe8",
+//             textShadow:
+//               "0 0 20px rgba(251, 207, 232, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
+//           }}
+//         >
+//           Chapter One
+//         </motion.span>
+        
+//         <motion.h2
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ delay: 0.6 }}
+//           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif mb-3 sm:mb-5 md:mb-7 lg:mb-10 font-bold leading-tight"
+//           style={{
+//             fontFamily: "'Playfair Display', serif",
+//             color: "#fdf2f8",
+//             textShadow:
+//               "0 0 30px rgba(253, 242, 248, 0.9), 0 0 60px rgba(251, 207, 232, 0.6), 0 4px 20px rgba(0, 0, 0, 0.9)",
+//           }}
+//         >
+//           How It All Started
+//         </motion.h2>
+        
+//         <motion.p
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ delay: 0.7 }}
+//           className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed font-medium"
+//           style={{
+//             color: "#fce7f3",
+//             textShadow:
+//               "0 0 20px rgba(252, 231, 243, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
+//           }}
+//         >
+//           Do you remember the day we first met? The world seemed to pause for just
+//           a second. I never knew that a single conversation would lead to a
+//           lifetime of laughter and love. From that first smile, I knew there was
+//           something magical about us.
+//         </motion.p>
+//       </div>
+//     </div>
+
+//     <NavigationBar onNext={onNext} onPrev={onPrev} onHome={onHome} />
+//   </motion.div>
+// ); 
+
 const Page2_Beginning = ({
   onNext,
   onPrev,
@@ -721,107 +963,116 @@ const Page2_Beginning = ({
     exit={{ opacity: 0, x: -100 }}
     transition={{ duration: 0.6 }}
     style={{ backgroundColor: "#1a0a12" }}
-    className="min-h-screen flex flex-col lg:flex-row items-center justify-center p-4 sm:p-6 md:p-8 gap-8 sm:gap-10 md:gap-12 pb-32"
+    className="min-h-screen w-full py-8 sm:py-12 md:py-16 lg:py-20 pb-24 sm:pb-28 md:pb-32 relative overflow-hidden"
   >
     <FloatingSparkles count={10} />
     <FloatingHearts count={12} />
 
-    <motion.div
-      className="w-full lg:w-1/2 relative"
-      initial={{ x: -50, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ delay: 0.3, duration: 0.8 }}
-    >
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+      {/* Image Container */}
       <motion.div
-        className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10"
-        style={{
-          border: "4px solid rgba(251, 207, 232, 0.3)",
-          boxShadow:
-            "0 0 50px rgba(244, 114, 182, 0.4), 0 25px 70px rgba(0, 0, 0, 0.9)",
-        }}
-        whileHover={{
-          scale: 1.02,
-          boxShadow:
-            "0 0 60px rgba(244, 114, 182, 0.5), 0 30px 80px rgba(0, 0, 0, 0.9)",
-        }}
-        transition={{ duration: 0.4 }}
+        className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-none lg:w-1/2 relative"
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
       >
         <motion.div
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative z-10"
+          style={{
+            border: "4px solid rgba(251, 207, 232, 0.3)",
+            boxShadow:
+              "0 0 50px rgba(244, 114, 182, 0.4), 0 25px 70px rgba(0, 0, 0, 0.9)",
+          }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow:
+              "0 0 60px rgba(244, 114, 182, 0.5), 0 30px 80px rgba(0, 0, 0, 0.9)",
+          }}
+          transition={{ duration: 0.4 }}
         >
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1769050737841-da20a4a13e19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZSUyMGxhdWdoaW5nfGVufDF8fHx8MTc2OTYwNzIzNnww"
-            alt="The Beginning"
-            className="w-full h-full object-cover"
-          />
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1769050737841-da20a4a13e19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZSUyMGxhdWdoaW5nfGVufDF8fHx8MTc2OTYwNzIzNnww"
+              alt="The Beginning"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </motion.div>
+        
+        {/* Calendar Badge */}
+        <motion.div
+          className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 md:-top-6 md:-left-6 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 rounded-full flex items-center justify-center -rotate-12 shadow-lg z-20"
+          style={{
+            backgroundColor: "rgba(251, 113, 133, 0.15)",
+            border: "3px solid rgba(251, 207, 232, 0.5)",
+            boxShadow:
+              "0 0 40px rgba(244, 114, 182, 0.5), 0 10px 30px rgba(0, 0, 0, 0.8)",
+          }}
+          animate={{ rotate: [-12, -8, -12], y: [0, -5, 0] }}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          <Calendar className="text-rose-300 drop-shadow-lg w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14" />
         </motion.div>
       </motion.div>
-      <motion.div
-        className="absolute -top-6 -left-6 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center -rotate-12 shadow-lg z-20"
-        style={{
-          backgroundColor: "rgba(251, 113, 133, 0.15)",
-          border: "3px solid rgba(251, 207, 232, 0.5)",
-          boxShadow:
-            "0 0 40px rgba(244, 114, 182, 0.5), 0 10px 30px rgba(0, 0, 0, 0.8)",
-        }}
-        animate={{ rotate: [-12, -8, -12], y: [0, -5, 0] }}
-        transition={{ duration: 3, repeat: Infinity }}
-      >
-        <Calendar size={44} className="text-rose-300 drop-shadow-lg" />
-      </motion.div>
-    </motion.div>
 
-    <div className="w-full lg:w-1/2 flex flex-col items-start text-left px-2 sm:px-4">
-      <motion.span
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="font-bold tracking-widest uppercase mb-4 sm:mb-6 text-xl sm:text-2xl md:text-3xl"
-        style={{
-          color: "#fbcfe8",
-          textShadow:
-            "0 0 25px rgba(251, 207, 232, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
-        }}
-      >
-        Chapter One
-      </motion.span>
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6 }}
-        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-serif mb-6 sm:mb-8 md:mb-10 font-bold leading-tight"
-        style={{
-          fontFamily: "'Playfair Display', serif",
-          color: "#fdf2f8",
-          textShadow:
-            "0 0 50px rgba(253, 242, 248, 0.9), 0 0 100px rgba(251, 207, 232, 0.6), 0 6px 30px rgba(0, 0, 0, 0.9)",
-        }}
-      >
-        How It All Started
-      </motion.h2>
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7 }}
-        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-8 font-medium"
-        style={{
-          color: "#fce7f3",
-          textShadow:
-            "0 0 25px rgba(252, 231, 243, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
-        }}
-      >
-        Do you remember the day we first met? The world seemed to pause for just
-        a second. I never knew that a single conversation would lead to a
-        lifetime of laughter and love. From that first smile, I knew there was
-        something magical about us.
-      </motion.p>
+      {/* Text Content */}
+      <div className="w-full lg:w-1/2 flex flex-col items-start text-left px-2 sm:px-4">
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="font-bold tracking-wider sm:tracking-widest uppercase mb-2 sm:mb-3 md:mb-4 lg:mb-6 text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+          style={{
+            color: "#fbcfe8",
+            textShadow:
+              "0 0 25px rgba(251, 207, 232, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
+          }}
+        >
+          Chapter One
+        </motion.span>
+        
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl font-serif mb-3 sm:mb-5 md:mb-6 lg:mb-8 xl:mb-10 font-bold leading-tight"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            color: "#fdf2f8",
+            textShadow:
+              "0 0 50px rgba(253, 242, 248, 0.9), 0 0 100px rgba(251, 207, 232, 0.6), 0 6px 30px rgba(0, 0, 0, 0.9)",
+          }}
+        >
+          How It All Started
+        </motion.h2>
+        
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl leading-relaxed font-medium"
+          style={{
+            color: "#fce7f3",
+            textShadow:
+              "0 0 25px rgba(252, 231, 243, 0.7), 0 3px 15px rgba(0, 0, 0, 0.8)",
+          }}
+        >
+          Do you remember the day we first met? The world seemed to pause for just
+          a second. I never knew that a single conversation would lead to a
+          lifetime of laughter and love. From that first smile, I knew there was
+          something magical about us.
+        </motion.p>
+      </div>
     </div>
 
     <NavigationBar onNext={onNext} onPrev={onPrev} onHome={onHome} />
   </motion.div>
 );
+
 
 // const Page3_Gallery = ({
 //   onNext,
